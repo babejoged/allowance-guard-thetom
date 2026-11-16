@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: allowance-guard
+    runtime: docker
+    plan: free
+    healthCheckPath: /health
+    envVars:
+      - key: PUBLIC_ORIGIN
+        sync: false
+      - key: PORT
+        value: "10000"
